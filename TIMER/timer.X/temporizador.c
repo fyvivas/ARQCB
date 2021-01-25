@@ -28,12 +28,12 @@ unsigned char count = 0;
 
 int main(void) {
     INTCONbits.GIE = 0;
-    T0CONbits.T0CS = 0;
-    T0CONbits.PSA = 0;
-    T0CONbits.T0PS = 0b001;
-    T0CONbits.T08BIT = 0;
-    TMR0L = 3034;
-    TMR0H = (3034) >> 8;
+    T0CONbits.T0CS = 0; // temporizador
+    T0CONbits.PSA = 0; // prescaler enable
+    T0CONbits.T0PS = 0b001; // prescaler 4
+    T0CONbits.T08BIT = 0; // 16 bits
+    TMR0L = 0xDA; //3034
+    TMR0H = 0x0B;
     T0CONbits.TMR0ON = 1;
     TRISD = 0x00;
     LATD = 0x00;
@@ -53,8 +53,8 @@ int main(void) {
         if (!PORTAbits.RA4) {
             __delay_ms(50);
             count = 0;
-            TMR0L = 3034;
-            TMR0H = (3034) >> 8;
+            TMR0L = 0xDA;
+            TMR0H = 0x0B;
             INTCONbits.TMR0IF = 0;
         }
     }
@@ -66,8 +66,8 @@ void interrupt ISR_TIMER_0(void) {
         if (++count == 100) {
             count = 0;
         }
-        TMR0L = 3034;
-        TMR0H = (3034) >> 8;
+        TMR0L = 0xDA;
+        TMR0H = 0x0B;
         INTCONbits.TMR0IF = 0;
     }
 }
