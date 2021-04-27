@@ -12,8 +12,7 @@
 extern "C" {
 #endif
 
-
-
+#define LED_RED PORTBbits.RB0
 
 #ifdef	__cplusplus
 }

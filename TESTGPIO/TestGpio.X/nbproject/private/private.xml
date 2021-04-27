@@ -3,7 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/ARQCB/GPIO/gpio.X/gpio_main.c</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/ARQCB/TESTGPIO/TestGpio.X/fuses.h</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/ARQCB/TESTGPIO/TestGpio.X/maintest.c</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/ARQCB/TESTGPIO/TestGpio.X/pinout.h</file>
         </group>
     </open-files>
 </project-private>
